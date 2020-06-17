@@ -1,0 +1,106 @@
+:root {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: fit-content; /*moves border*/
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #E8E4D1;
+    border: 5px solid #D25E7C;
+    border-top: none;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+section {
+    padding: 0 20px 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background: #2F5A71;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+h1 {
+    margin-block-end: 0;
+}
+
+p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+.image, .cs-image {
+    width: 50%;
+}
+
+.image img, .cs-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.intro, .case-study {
+    align-items: center;
+    justify-content: center;
+}
+
+.cs-image {
+    position: relative;
+    margin-left: auto;
+    margin-right: 10%;
+}
+
+.cs-image::before {
+    position: absolute;
+    bottom: 10px;
+    left: -110px;
+    font-size: 1.2rem;
+    color: #C77708;
+    font-family: "Montserrat";
+    font-weight: bolder;
+}
+
+.pointbox::before {
+    content: "PointBox";
+}
+
+.capstone::before {
+    content: "Capstone\A Project";
+    white-space: pre-wrap;
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        font-size: 20px;
+    }
+
+    .cs-image::before {
+        font-size: 1.5rem;
+        left: -175px;
+        bottom: 20px;
+    }
+}
